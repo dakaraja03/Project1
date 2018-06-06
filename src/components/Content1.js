@@ -3,6 +3,19 @@ import Navbar from './Navbar';
 import Sidebar from './Sidebar';
 
 class Content extends Component {
+  constructor() {
+    super();
+    this.state = {
+      reloadPage: true
+    }
+  }
+  componentWillMount() {
+    if(this.state.reloadPage) {
+      console.log("object")
+      // window.location.reload();
+      this.setState({reloadPage: false})
+    }
+  }
 
   selectAllCheckboxes() {
     var checkboxes = document.getElementsByClassName('foo');
@@ -37,7 +50,7 @@ class Content extends Component {
                 <div className="col-sm-8">
                   <div className="form-check">
                     <input type="checkbox" className="form-check-input" id="exampleCheck1" />
-                    <label className="form-check-label" for="exampleCheck1">Check box</label>
+                    <label className="form-check-label" htmlFor="exampleCheck1">Check box</label>
                   </div>
                 </div>
               </div>
@@ -45,25 +58,25 @@ class Content extends Component {
               <fieldset className="form-group">
                 <div className="row">
                   <legend className="col-form-label col-sm-4 pt-0">Debit card type</legend>
-                  <div className="col-sm-8">
+                  <div className="col-sm-8" id="debitcardType">
                     <div className="form-check">
                       <input className="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" />
-                      <label className="form-check-label" for="gridRadios1">
+                      <label className="form-check-label" htmlFor="gridRadios1">
                         Radio 1</label>
                     </div>
                     <div className="form-check">
                       <input className="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2" />
-                      <label className="form-check-label" for="gridRadios2">
+                      <label className="form-check-label" htmlFor="gridRadios2">
                         Radio 2</label>
                     </div>
                     <div className="form-check">
                       <input className="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3" />
-                      <label className="form-check-label" for="gridRadios3">
+                      <label className="form-check-label" htmlFor="gridRadios3">
                         Radio 3</label>
                     </div>
                     <div className="form-check">
                       <input className="form-check-input" type="radio" name="gridRadios" id="gridRadios4" value="option4" />
-                      <label className="form-check-label" for="gridRadios4">
+                      <label className="form-check-label" htmlFor="gridRadios4">
                         Radio 4</label>
                     </div>
                   </div>
@@ -71,7 +84,7 @@ class Content extends Component {
               </fieldset>
 
               <div className="form-group">
-                <div className="card text-center" style={{ height: "220px" }}>
+                <div className="card text-center" style={{ height: "200px" }}>
                   <div className="card-header">
                     <ul className="nav nav-tabs" id="myTab" role="tablist">
                       <li className="nav-item">
@@ -89,15 +102,15 @@ class Content extends Component {
                     <div className="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                       <div className="card-body" id="tab1">
                         <div className="form-group row">
-                          <label htmlFor="customerName" className="col-sm-4 col-form-label">Label 1</label>
+                          <label htmlFor="label1" className="col-sm-4 col-form-label">Label 1</label>
                           <div className="col-sm-5">
-                            <input type="email" className="form-control" id="customerName" />
+                            <input type="email" className="form-control" id="label1" />
                           </div>
                         </div>
                         <div className="form-group row">
-                          <label htmlFor="customerName" className="col-sm-4 col-form-label">Label 2</label>
+                          <label htmlFor="label2" className="col-sm-4 col-form-label">Label 2</label>
                           <div className="col-sm-5">
-                            <input type="email" className="form-control" id="customerName" />
+                            <input type="email" className="form-control" id="label2" />
                           </div>
                         </div>
                       </div>
@@ -112,11 +125,11 @@ class Content extends Component {
                 <div className="p-2">
                   <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Show popup</button>
 
-                  <div className="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" >
+                  <div className="modal fade" id="exampleModalCenter" tabIndex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" >
                     <div className="modal-dialog modal-dialog-centered" role="document">
                       <div className="modal-content">
                         <div className="modal-header">
-                          <h5 className="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                          <h5 className="modal-title" id="exampleModalLongTitle">Popup</h5>
                           <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                           </button>

@@ -4,6 +4,12 @@ import Navbar from './Navbar';
 import Sidebar from './Sidebar';
 
 class Content extends Component {
+
+  nextPage(e) {
+    e.preventDefault();
+    // console.log("object")
+    window.location.href = "/page2"
+  }
   render() {
     return (
       <div>
@@ -13,7 +19,7 @@ class Content extends Component {
           </div>
         </div>
         <div className="row">
-          <div className="col-md-3 h-100">
+          <div className="col-md-3 h-auto">
             <Sidebar />
           </div>
           <div className="col-md-9 my-5 text-center">
@@ -76,25 +82,25 @@ class Content extends Component {
               <fieldset className="form-group">
                 <div className="row">
                   <legend className="col-form-label col-sm-4">Select</legend>
-                  <div className="col-sm-8 text-left">
+                  <div className="col-sm-8 text-left" id="select">
                     <div className="form-check">
-                      <input className="form-check-input" type="checkbox" name="gridRadios" id="gridRadios1" value="option1" />
-                      <label className="form-check-label" htmlFor="gridRadios1">
+                      <input className="form-check-input" type="checkbox" name="gridRadios" id="gridCheckbox1" value="option1" />
+                      <label className="form-check-label" htmlFor="gridCheckbox1">
                         Mobile Banking</label>
                     </div>
                     <div className="form-check">
-                      <input className="form-check-input" type="checkbox" name="gridRadios" id="gridRadios2" value="option2" />
-                      <label className="form-check-label" htmlFor="gridRadios2">
+                      <input className="form-check-input" type="checkbox" name="gridRadios" id="gridCheckbox2" value="option2" />
+                      <label className="form-check-label" htmlFor="gridCheckbox2">
                         Internet Banking</label>
                     </div>
                     <div className="form-check">
-                      <input className="form-check-input" type="checkbox" name="gridRadios" id="gridRadios3" value="option3" />
-                      <label className="form-check-label" htmlFor="gridRadios3">
+                      <input className="form-check-input" type="checkbox" name="gridRadios" id="gridCheckbox3" value="option3" />
+                      <label className="form-check-label" htmlFor="gridCheckbox3">
                         Passbook</label>
                     </div>
                     <div className="form-check">
-                      <input className="form-check-input" type="checkbox" name="gridRadios" id="gridRadios4" value="option4" />
-                      <label className="form-check-label" htmlFor="gridRadios4">
+                      <input className="form-check-input" type="checkbox" name="gridRadios" id="gridCheckbox4" value="option4" />
+                      <label className="form-check-label" htmlFor="gridCheckbox4">
                         Checkbox 4</label>
                     </div>
                   </div>
@@ -102,7 +108,8 @@ class Content extends Component {
               </fieldset>
               <div className="form-group">
                 <div className="d-flex justify-content-end">
-                  <Link to="/page2"><button type="submit" className="btn btn-primary btn-lg">Next</button></Link>
+                  {/* <Link to="/page2"><button type="submit" className="btn btn-primary btn-lg">Next{window.location.href="/page2"}</button></Link> */}
+                  <button type="submit" className="btn btn-primary btn-lg" onClick={this.nextPage.bind(this)}>Next</button>
                 </div>
               </div>
             </form>
