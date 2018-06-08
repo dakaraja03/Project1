@@ -45,7 +45,7 @@ var tour = new Tour({
       placement: "left",
     },
     {
-      element: "#commemts",
+      element: "#comments",
       title: "Comments",
       content: "enter comments",
       placement: "left",
@@ -63,7 +63,7 @@ var tour = new Tour({
       placement: "left",
     },
     {
-      element: "#exampleCheck1",
+      element: "#premium-member",
       title: "Premium Member",
       content: "click the checkbox",
       placement: "left",
