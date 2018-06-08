@@ -81,7 +81,7 @@ const webdriver = require('selenium-webdriver'),
     });
     
     await driver.sleep(1500).then(d => {
-        return driver.findElement(By.id('customerName')).sendKeys("test");
+        return driver.findElement(By.css('#customerName')).sendKeys("test");
     }).catch(err => {
         console.log("error", err);
     });

@@ -72,7 +72,7 @@ class Content extends Component {
                 </fieldset>
 
                 <div className="form-group my-5">
-                  <div className="card" style={{ width: '80%', height: "240px", margin: 'auto' }}>
+                  <div className="card" style={{ width: '80%', height: "239px", margin: 'auto' }}>
                     <div className="card-header">
                       <ul className="nav nav-tabs" id="myTab" role="tablist">
                         <li className="nav-item">
@@ -92,13 +92,13 @@ class Content extends Component {
                           <div className="form-group row">
                             <label htmlFor="label1" className="col-sm-4 col-form-label">Label 1</label>
                             <div className="col-sm-5">
-                              <input type="email" className="form-control" id="label1" />
+                              <input type="text" className="form-control" id="label1" />
                             </div>
                           </div>
                           <div className="form-group row">
                             <label htmlFor="label2" className="col-sm-4 col-form-label">Label 2</label>
                             <div className="col-sm-5">
-                              <input type="email" className="form-control" id="label2" />
+                              <input type="text" className="form-control" id="label2" />
                             </div>
                           </div>
                         </div>

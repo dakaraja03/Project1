@@ -30,7 +30,7 @@ class Content extends Component {
                 <div className="form-group row">
                   <label htmlFor="customerName" className="col-sm-6 col-form-label">Cutomer Name</label>
                   <div className="col-sm-6">
-                    <input type="email" className="form-control" id="customerName" placeholder="enter name" />
+                    <input type="text" className="form-control" id="customerName" placeholder="enter name" />
                   </div>
                 </div>
 
@@ -49,7 +49,7 @@ class Content extends Component {
                   <label htmlFor="branch" className="col-sm-6 col-form-label">Branch</label>
                   <div className="col-sm-6">
                     <form className="d-flex flex-row">
-                      <input className="form-control mr-4" id="branch" type="search" placeholder="enter branch" aria-label="Search" />
+                      <input type="search" className="form-control mr-4" id="branch" placeholder="enter branch" aria-label="Search" />
                       <button className="btn my-0 fa fa-search bg-primary text-dark" type="button"></button>
                     </form>
                   </div>
@@ -110,8 +110,7 @@ class Content extends Component {
                 </fieldset>
                 <div className="form-group">
                   <div className="d-flex justify-content-end">
-                    {/* <Link to="/page2"><button type="submit" className="btn btn-primary btn-lg">Next{window.location.href="/page2"}</button></Link> */}
-                    <button type="submit" className="btn btn-primary btn-lg" id="next-btn" onClick={this.nextPage.bind(this)}>Next</button>
+                    <button type="button" className="btn btn-primary btn-lg" id="next-btn" onClick={this.nextPage.bind(this)}>Next</button>
                   </div>
                 </div>
               </form>
